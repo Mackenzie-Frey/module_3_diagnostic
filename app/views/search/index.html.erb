@@ -1,0 +1,13 @@
+<h1>Results</h1>
+<% @nrel_facade.each do |station| %>
+<section class="station" id="<% station.name %>">
+  <h2>Station:</h2>
+  <h3>Name: </h3><%= station.name %>
+  <h3>Address: </h3><%= station.address %>
+  <h3>Fuel Types: </h3><% station.fuel_types.each do |fuel_type| %>
+                <%= fuel_type %>
+              <% end %>
+  <h3>Distance: </h3><%= station.distance %>
+  <h3>Access Times: </h3><%= station.access_times %>
+</section>
+<% end %>
