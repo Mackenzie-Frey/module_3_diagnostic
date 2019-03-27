@@ -5,7 +5,7 @@ describe 'As a user visiting the root page' do
 
     visit '/'
 
-    fill_in "search[q]", with: 80206
+    fill_in :q, with: 80206
 
     click_on 'Locate'
 
