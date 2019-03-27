@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @nrel_face = NrelFacade.new(params)
+    data = NrelService.new(params)
+    @nrel_facade = NrelFacade.new(data)
   end
 end
